@@ -1,0 +1,41 @@
+{
+  "name": "slidev-addon-asciinema",
+  "version": "0.1.0",
+  "description": "Slidev addon to embed asciinema casts to presentations.",
+  "author": "Murilo Cunha <murilo.k.s.cunha95@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:murilo-cunha/slidev-addon-asciinema.git"
+  },
+  "bugs": {
+    "url": "https://github.com/murilo-cunha/slidev-addon-asciinema/issues"
+  },
+  "files": [
+    "components/*"
+  ],
+  "scripts": {
+    "dev": "slidev example.md --open",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md"
+  },
+  "dependencies": {
+    "asciinema-player": "^3.4.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.34"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.42.5",
+    "@slidev/theme-default": "^0.21.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.32.1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "vuejs",
+    "slidev-addon",
+    "slidev"
+  ]
+}
