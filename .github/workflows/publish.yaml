@@ -20,8 +20,4 @@ jobs:
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Commit and push changes
-        run: |
-          git add package.json
-          git commit -m '[Automated commit] Bump version'
-          git push --tags
+      - run: git push --tags  # `yarn` already commits and tags
