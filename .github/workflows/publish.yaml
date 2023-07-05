@@ -22,7 +22,6 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Commit and push changes
         run: |
-          git checkout main
           git add package.json
           git commit -m '[Automated commit] Bump version'
           git push --tags
