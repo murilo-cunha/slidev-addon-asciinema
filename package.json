@@ -1,6 +1,6 @@
 {
   "name": "slidev-addon-asciinema",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Slidev addon to embed asciinema casts to presentations.",
   "author": "Murilo Cunha <murilo.k.s.cunha95@gmail.com>",
   "repository": {
