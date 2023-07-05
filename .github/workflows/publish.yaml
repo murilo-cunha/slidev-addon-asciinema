@@ -20,4 +20,17 @@ jobs:
       - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: git push --tags  # `yarn` already commits and tags
+      - name: Push commits and tags
+        run: git push --follow-tags  # `yarn` already commits and tags
+      - name: Get latest tag (added by yarn)
+        run: echo "TAG=$(git describe --tags --abbrev=0)" >> $GITHUB_ENV
+      - name: Create release
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: "${{ env.TAG }}",
+              generate_release_notes: true
+            })
