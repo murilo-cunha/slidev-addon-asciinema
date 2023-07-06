@@ -15,7 +15,7 @@ See all `:playerProps` at [`asciinema player` docs](https://github.com/asciinema
 
 ```md
 <RenderWhen context="main">
-    <Asciinema src="/casts/demo.cast" :playerProps="{speed: 2, rows: 15}"/>
+    <Asciinema src="./casts/demo.cast" :playerProps="{speed: 2, rows: 15}"/>
 </RenderWhen>
 ```
 
