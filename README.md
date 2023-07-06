@@ -1,11 +1,13 @@
-<div style="text-align:center;">
-    <img src="https://pbs.twimg.com/profile_images/1388805947691134976/bIiEQTyK_400x400.jpg" width=30%/>
+<p align="center">
+    <img src="https://d33wubrfki0l68.cloudfront.net/9a47dde680cca08e326c07824009ed1adc29626e/6a1c0/logo-title.png" width=30%/>
     <img src="https://avatars.githubusercontent.com/u/6506055?s=280&v=4" width=30%/>
-</div>
+</p>
 
 # Asciinema player for Slidev
 
 > Slidev addon to embed asciinema casts to presentations.
+
+![demo](https://raw.githubusercontent.com/murilo-cunha/slidev-addon-asciinema/main/public/casts/demo.gif)
 
 ## Get started
 
@@ -66,9 +68,9 @@ Or add it in your `package.json` file:
 
 ```json
 {
-  // ...
+
   "scripts": {
-    // ...
+
   },
   "slidev": {
     "addons": [
