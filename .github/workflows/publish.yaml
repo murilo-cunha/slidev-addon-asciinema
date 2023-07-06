@@ -2,8 +2,10 @@ name: Publish package to npmjs
 on:
   push:
     branches: [main]
+env:
+  BASE: slidev-addon-asciinema
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -34,3 +36,31 @@ jobs:
               tag_name: "${{ env.TAG }}",
               generate_release_notes: true
             })
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: yarn install
+      - name: Build
+        run: yarn build --base ${{ env.BASE }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist/
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
