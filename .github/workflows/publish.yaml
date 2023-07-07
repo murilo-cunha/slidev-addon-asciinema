@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
 env:
-  BASE: slidev-addon-asciinema
+  BASE: /slidev-addon-asciinema
 jobs:
   publish:
     runs-on: ubuntu-latest

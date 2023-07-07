@@ -106,6 +106,21 @@ All the[ `asciinema-player`'s options](https://github.com/asciinema/asciinema-pl
 </RenderWhen>
 ```
 
+### Base paths
+
+If you are building your slides for [static hosting](https://sli.dev/guide/hosting.html#static-hosting) and you are using a different [base path](https://sli.dev/guide/hosting.html#base-path) (i.e.: you're using GitHub Pages). The component should work as expected, but remember to include the base path in your `vite.config.js` file.
+
+```sh
+slidev build --base /your-base-path
+```
+
+```js
+export default {
+  base: '/your-base-path',
+};
+
+```
+
 ## Known issues
 
 There are a couple of issues already identified
