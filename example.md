@@ -14,19 +14,14 @@ layout: intro
 See all `:playerProps` at [`asciinema player` docs](https://github.com/asciinema/asciinema-player)
 
 ```md
-<RenderWhen context="main">
-    <Asciinema src="/casts/demo.cast" :playerProps="{speed: 2, rows: 15}"/>
-</RenderWhen>
+<Asciinema src="/casts/demo.cast" :playerProps="{speed: 2, rows: 15}"/>
 ```
 
 ---
 
 # Demo
 
-
-<RenderWhen context="main">
-    <Asciinema src="/casts/demo.cast" :playerProps="{speed: 2, rows: 16}"/>
-</RenderWhen>
+<Asciinema src="/casts/demo.cast" :playerProps="{speed: 2, rows: 16, terminalFontFamily: 'MesloLGS NF'}"/>
 
 ---
 layout: cover
