@@ -2701,3 +2701,9 @@ span.ap-marker-container:hover span.ap-marker-tooltip {
 .asciinema-theme-nord .fg-15 {
   font-weight: bold;
 }
+
+@font-face {
+  font-family: "MesloLGS NF";
+  src: local(MesloLGS NF Regular),
+        url("https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf") format("truetype");
+}

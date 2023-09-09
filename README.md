@@ -121,12 +121,20 @@ export default {
 
 ```
 
+
+## Fonts
+
+You can specify the `asciinemaplayer` fonts by specifying the `terminalFontFamily` [player prop](https://github.com/asciinema/asciinema-player#fonts). Currently, only the following non-default fonts are supported:
+
+- MesloLGS NF
+
+If you want to use a different font, please open an issue or a PR ([see example](https://github.com/murilo-cunha/slidev-addon-asciinema/blob/main/components/asciinema-player.css#L2705-L2709)).
+
 ## Known issues
 
 There are a couple of issues already identified
 
 - Player placeholder is resized after playing cast - [#1](https://github.com/murilo-cunha/slidev-addon-asciinema/issues/1)
-- Nerd fonts are not supported by the player - [#2](https://github.com/murilo-cunha/slidev-addon-asciinema/issues/2)
 - Video's progress does not move in the same place where click happens - [#5](https://github.com/murilo-cunha/slidev-addon-asciinema/issues/5)
 
 Would you like to contribute? Leave a PR! 🚀
