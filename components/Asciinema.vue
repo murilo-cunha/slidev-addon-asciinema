@@ -1,22 +1,12 @@
 <template>
-  <div :id="src" />
+  <RenderWhen context="main">
+    <AsciinemaPlayer :src="src" :playerProps="playerProps" />
+  </RenderWhen>
 </template>
 
-<script>
-import * as AsciinemaPlayer from "asciinema-player";
+<script setup>
+import AsciinemaPlayer from "./AsciinemaPlayer.vue";
+import RenderWhen from "@slidev/client/builtin/RenderWhen.vue";
 
-export default {
-  props: ["src", "playerProps"],
-  mounted() {
-    AsciinemaPlayer.create(
-      import.meta.env.BASE_URL + this.src,
-      document.getElementById(this.src),
-      this.playerProps
-    );
-  },
-};
+const props = defineProps(["src", "playerProps"]);
 </script>
-
-<style>
-@import "./asciinema-player.css";
-</style>
