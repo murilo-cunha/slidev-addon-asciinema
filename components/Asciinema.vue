@@ -1,7 +1,9 @@
 <template>
-  <RenderWhen context="main">
-    <AsciinemaPlayer :src="src" :playerProps="playerProps" />
-  </RenderWhen>
+  <div>
+    <RenderWhen context="main">
+      <AsciinemaPlayer :src="src" :playerProps="playerProps" />
+    </RenderWhen>
+  </div>
 </template>
 
 <script setup>
