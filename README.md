@@ -68,9 +68,8 @@ Or add it in your `package.json` file:
 
 ```json
 {
-
   "scripts": {
-
+    
   },
   "slidev": {
     "addons": [
@@ -82,14 +81,10 @@ Or add it in your `package.json` file:
 
 ### Use it in your presentation
 
-> 🚨 Wrap the component in `<RenderWhen>` tags. Slidev will otherwise render the component multiple times. See [#396](https://github.com/slidevjs/slidev/issues/396#issuecomment-1137191344) for more information.
-
 ```md
 # Example
 
-<RenderWhen context="main">
-    <Asciinema src="/casts/yourcast.cast" />
-</RenderWhen>
+<Asciinema src="/casts/yourcast.cast" />
 ```
 
 The parameter `src` will look for static assets from the [`public` directory](https://sli.dev/custom/directory-structure.html#public). In this example, the file is be located at `your-project-root/public/casts/yourcast.cast`.
@@ -101,9 +96,7 @@ All the[ `asciinema-player`'s options](https://github.com/asciinema/asciinema-pl
 ```md
 # Example
 
-<RenderWhen context="main">
-    <Asciinema src="/casts/yourcast.cast" :playerProps="{speed: 2, rows: 23}"/>
-</RenderWhen>
+<Asciinema src="/casts/yourcast.cast" :playerProps="{speed: 2, rows: 23}"/>
 ```
 
 ### Base paths
