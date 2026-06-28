@@ -18,5 +18,5 @@ export default {
 </script>
 
 <style>
-@import "./asciinema-player.css";
+@import "asciinema-player/dist/bundle/asciinema-player.css";
 </style>
